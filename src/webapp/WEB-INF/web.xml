@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                      https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+  version="6.0"
+  metadata-complete="true">
+
+  
+  <welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.royal.controller.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>	
+	</servlet-mapping>
+	
+		<init-param>
+			<param-name>urlName</param-name>
+			<param-value>jdbc:mysql://localhost:3306/test</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>driverClass</param-name>
+			<param-value>com.mysql.jdbc.Driver</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>userName</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>root</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>InsertStudentServlet</servlet-name>
+		<servlet-class>com.royal.controller.InsertStudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsertStudentServlet</servlet-name>
+		<url-pattern>/InsertStudentServlet</url-pattern>	
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>ListStudentServlet</servlet-name>
+		<servlet-class>com.royal.controller.ListStudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListStudentServlet</servlet-name>
+		<url-pattern>/ListStudentServlet</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteStudentServlet</servlet-name>
+		<servlet-class>com.royal.controller.DeleteStudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteStudentServlet</servlet-name>
+		<url-pattern>/DeleteStudentServlet</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EditStudentServlet</servlet-name>
+		<servlet-class>com.royal.controller.EditStudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditStudentServlet</servlet-name>
+		<url-pattern>/EditStudentServlet</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateStudentServlet</servlet-name>
+		<servlet-class>com.royal.controller.UpdateStudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateStudentServlet</servlet-name>
+		<url-pattern>/UpdateStudentServlet</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>com.royal.controller.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/LogoutServlet</url-pattern>	
+	</servlet-mapping>
+  
+</web-app>
